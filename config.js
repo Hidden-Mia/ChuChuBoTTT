@@ -2,8 +2,8 @@
 exports.url = 'play.pokemonshowdown.com';
 
 // The nick and password to log in with
-var nick = exports.nick = ''
-exports.pass = '';
+var nick = exports.nick = 'Rolelay BoTTT'
+exports.pass = 'aaaaaa';
 
 // A list of private rooms that the bot will not leak through the seen command
 exports.privaterooms = [];
@@ -13,7 +13,7 @@ exports.privaterooms = [];
 // Showdown itself.
 // Using only alphanumeric characters and spaces is not allowed.
 // Add more command characters 
-var comChar = exports.commandcharacter = ['+', '.'];
+var comChar = exports.commandcharacter = ['+'];
 
 // The default rank is the minimum rank that can use a command in a room when
 // no rank is specified in settings.json
@@ -40,7 +40,7 @@ exports.debuglevel = 3;
 // Users who can use all commands regardless of their rank. Be very cautious
 // with this, especially on servers other than main.
 // This, however does NOT give dev permissions which are declared in parser.js
-exports.excepts = [];
+exports.excepts = ['princesky','alliancesky','miaflores'];
 
 // Add a link to the help for the bot here. When there is a link here, .help and .guide
 // will link to it.
@@ -77,23 +77,10 @@ exports.avatar = null;
 // When you pm the bot but don't use a command, it replies you this message.
 // Example: "Hi, I'm a bot. Use .guide to view a command guide"
 exports.pmmessage = "Hi, I am only a bot.  Please PM another staff member for assistance. Use " + comChar[0] + "guide to see my commands. Have a nice day! n_n";
-/*
-exports.override = {
-	server: "sim.smogon.com",
-	port: 8000,
-	serverid: "showdown"
-}
 
 for c9 servers
 exports.override = {
-	server: "chuchupsim-pikachildyellow.c9.io",
+	server: "dedicatedrpserver.lustyash.c9.io",
 	port: 80,
-	serverid: "chuchu"
+	serverid: "roleplay"
 }
-//for origin
-exports.override = {
-	server: "158.69.205.118",
-	port: 7000,
-	serverid: "origin"
-}
-*/
