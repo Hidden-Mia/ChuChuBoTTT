@@ -18,7 +18,6 @@ var rpModes = [
 
 exports.commands = {
     setrp: function(arg, by, room) {
-		if (room !== rpRoom) return false;
 		if (!Bot.hasRank(by, '%@#&~')) return false;
 		if (currentRP) {
 			Bot.say(by, room, 'There is currently an RP going on. Please end it before starting another one.');
@@ -40,7 +39,6 @@ exports.commands = {
 		}
 	},
 	endrp: function(arg, by, room) {
-		if (room !== rpRoom) return false;
 		if (!Bot.hasRank(by, '~')) return false;
 		if (!currentRP) {
 			Bot.say(by, room, 'There is currently no RP going on.');
@@ -50,7 +48,7 @@ exports.commands = {
 		Bot.say(by, room, 'The RP has been ended.');
 	},
 	rp: function(arg, by, room) {
-		if (room !== rpRoom && room.charAt(0) !== ',') return false;
+		if (room.charAt(0) !== ',') return false;
 		if (Bot.hasRank(by, '~') || room.charAt(0) === ',') {
 			var text = 'The current RP is ';
 		}
